@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>🦎 Cayenne Hunt</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+:root {
+  --bg:        #F2F3F8;
+  --surface:   #FFFFFF;
+  --outline:   #E0E0E0;
+  --on-surface:#1C1B1F;
+  --secondary: #49454F;
+  --meta:      #79747E;
+  --primary:   #1A73E8;
+  --primary-on:#FFFFFF;
+  --radius-card:12px;
+  --radius-chip:8px;
+  --shadow-card:0 1px 3px rgba(0,0,0,.10),0 1px 2px rgba(0,0,0,.06);
+
+  /* Tier tonal containers */
+  --gem-bg:#C8E6C9; --gem-text:#1B5E20;
+  --hot-bg:#FFF9C4; --hot-text:#E65100;
+  --watch-bg:#FFE0B2; --watch-text:#BF360C;
+  --low-bg:#ECEFF1; --low-text:#546E7A;
+  --skip-bg:#FFCDD2; --skip-text:#B71C1C;
+}
+
+body {
+  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background: var(--bg);
+  color: var(--on-surface);
+  min-height:100vh;
+}
+
+/* ── Layout shell ── */
+.page { max-width:600px; margin:0 auto; padding:16px 12px 40px; }
+
+/* ── Hero card ── */
+.hero {
+  border-radius:var(--radius-card);
+  padding:20px;
+  margin-bottom:12px;
+  box-shadow:var(--shadow-card);
+  position:relative;
+}
+.hero.tier-gem  { background:var(--gem-bg);   color:var(--gem-text); }
+.hero.tier-hot  { background:var(--hot-bg);   color:var(--hot-text); }
+.hero.tier-watch{ background:var(--watch-bg); color:var(--watch-text);}
+.hero.tier-low  { background:var(--low-bg);   color:var(--low-text); }
+
+.hero-label {
+  font-size:11px; font-weight:700; letter-spacing:.08em;
+  text-transform:uppercase; opacity:.75; margin-bottom:6px;
+}
+.hero-location {
+  font-size:17px; font-weight:600; margin-bottom:4px; line-height:1.3;
+}
+.hero-sub {
+  font-size:13px; opacity:.8; margin-bottom:14px;
+}
+.hero-price {
+  font-size:32px; font-weight:700; letter-spacing:-.01em; margin-bottom:14px;
+}
+.hero-signals {
+  display:flex; flex-wrap:wrap; gap:6px; margin-bottom:14px;
+}
+.sig {
+  font-size:12px; font-weight:600;
+  padding:3px 8px; border-radius:6px;
+  background:rgba(0,0,0,.08);
+}
+.sig-yes { }
+.sig-no  { opacity:.6; }
+.hero-urgency {
+  font-size:12px; font-weight:500; margin-bottom:16px; opacity:.85;
+}
+.hero-cta {
+  display:block; width:100%; padding:12px;
+  background:var(--primary); color:var(--primary-on);
+  text-decoration:none; border-radius:var(--radius-chip);
+  font-size:14px; font-weight:600; text-align:center;
+  letter-spacing:.01em;
+}
+.hero-meta {
+  display:flex; flex-wrap:wrap; gap:6px; margin-top:14px; padding-top:12px;
+  border-top:1px solid rgba(0,0,0,.10); font-size:11px; opacity:.7;
+  align-items:center;
+}
+.meta-chip {
+  padding:2px 7px; border-radius:5px;
+  background:rgba(0,0,0,.08); font-weight:600;
+}
+
+/* ── Filter chips ── */
+.filter-bar {
+  position:sticky; top:0; z-index:10;
+  background:var(--bg); padding:10px 0 8px;
+  display:flex; gap:6px; overflow-x:auto;
+  scrollbar-width:none; -ms-overflow-style:none;
+  margin-bottom:4px;
+}
+.filter-bar::-webkit-scrollbar{ display:none; }
+.chip-filter {
+  flex-shrink:0; padding:6px 14px;
+  border-radius:20px; border:1.5px solid var(--outline);
+  background:var(--surface); color:var(--secondary);
+  font-size:12px; font-weight:600; cursor:pointer;
+  white-space:nowrap; transition:all .15s;
+  outline:none;
+}
+.chip-filter.active {
+  background:var(--on-surface); color:#FFF;
+  border-color:var(--on-surface);
+}
+
+/* ── Listing card ── */
+.card {
+  background:var(--surface); border-radius:var(--radius-card);
+  box-shadow:var(--shadow-card); margin-bottom:10px; overflow:hidden;
+}
+.card[hidden]{ display:none; }
+.card-top {
+  display:flex; align-items:flex-start; gap:12px; padding:14px 14px 10px;
+}
+.score-badge {
+  flex-shrink:0; width:44px; height:44px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-size:16px; font-weight:800; line-height:1;
+}
+.score-badge.tier-gem  { background:var(--gem-bg);   color:var(--gem-text); }
+.score-badge.tier-hot  { background:var(--hot-bg);   color:var(--hot-text); }
+.score-badge.tier-watch{ background:var(--watch-bg); color:var(--watch-text);}
+.score-badge.tier-low  { background:var(--low-bg);   color:var(--low-text); }
+.score-badge.tier-skip { background:var(--skip-bg);  color:var(--skip-text);}
+
+.card-main { flex:1; min-width:0; }
+.card-title {
+  font-size:15px; font-weight:600; color:var(--on-surface);
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+.card-sub { font-size:12px; color:var(--meta); margin-top:2px; }
+
+.card-price-row {
+  display:flex; align-items:center; flex-wrap:wrap;
+  gap:6px; padding:0 14px 10px;
+}
+.price { font-size:20px; font-weight:700; color:var(--on-surface); }
+.chip-signal {
+  padding:2px 7px; border-radius:5px; font-size:11px; font-weight:700;
+  background:#F3E5F5; color:#4A148C;
+  letter-spacing:.02em;
+}
+.chip-signal.new   { background:#E3F2FD; color:#0D47A1; }
+.chip-signal.slow  { background:#FFF3E0; color:#E65100; }
+.chip-signal.relist{ background:#EDE7F6; color:#311B92; }
+.chip-signal.drop  { background:#E8F5E9; color:#1B5E20; }
+.chip-signal.air   { background:#FFCDD2; color:#B71C1C; }
+.chip-signal.dereg { background:#F5F5F5; color:#616161; }
+
+.card-signals {
+  display:flex; flex-wrap:wrap; gap:6px; padding:0 14px 10px;
+  font-size:12px;
+}
+.sig-yes { color:#2E7D32; font-weight:600; }
+.sig-no  { color:#B71C1C; font-weight:600; }
+.sig-unk { color:#79747E; }
+.sig-date{ color:var(--meta); margin-left:auto; }
+
+.card-divider { height:1px; background:var(--outline); margin:0 14px; }
+
+.card-actions {
+  display:flex; align-items:center; justify-content:space-between;
+  padding:10px 14px;
+}
+.btn-analysis {
+  background:none; border:1.5px solid var(--outline);
+  color:var(--secondary); font-size:12px; font-weight:600;
+  padding:6px 12px; border-radius:var(--radius-chip); cursor:pointer;
+}
+.btn-analysis:hover{ border-color:var(--primary); color:var(--primary); }
+.btn-view {
+  background:var(--primary); color:#FFF; text-decoration:none;
+  font-size:12px; font-weight:600; padding:6px 14px;
+  border-radius:var(--radius-chip);
+}
+.analysis-text {
+  padding:10px 14px 14px; font-size:13px; color:var(--secondary);
+  line-height:1.6; max-height:120px; overflow-y:auto;
+  border-top:1px solid var(--outline);
+}
+
+/* ── Section header ── */
+.section-hdr {
+  font-size:11px; font-weight:700; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--meta);
+  margin:18px 0 8px 4px;
+}
+
+/* ── Market pulse ── */
+.pulse {
+  background:var(--surface); border-radius:var(--radius-card);
+  box-shadow:var(--shadow-card); padding:14px;
+  display:flex; flex-wrap:wrap; gap:10px; margin-top:18px;
+}
+.pulse-item { font-size:12px; color:var(--secondary); }
+.pulse-item strong { color:var(--on-surface); font-weight:700; }
+.pulse-item .up   { color:#2E7D32; }
+.pulse-item .down { color:#B71C1C; }
+
+/* ── Gone section ── */
+.gone-section { margin-top:16px; }
+.gone-section summary {
+  font-size:12px; font-weight:700; letter-spacing:.05em;
+  text-transform:uppercase; color:var(--meta); cursor:pointer;
+  padding:8px 4px; list-style:none; user-select:none;
+}
+.gone-section summary::before { content:"▸ "; }
+.gone-section[open] summary::before { content:"▾ "; }
+.gone-chips {
+  display:flex; flex-wrap:wrap; gap:6px; padding-top:8px;
+}
+.gone-chip {
+  padding:4px 10px; border-radius:6px;
+  background:var(--surface); border:1px solid var(--outline);
+  font-size:11px; color:var(--meta);
+  box-shadow:0 1px 2px rgba(0,0,0,.05);
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+%%HERO_CARD%%
+
+<div class="filter-bar" id="filterBar">
+  <button class="chip-filter active" data-filter="all" onclick="setFilter('all',this)">ALL</button>
+  <button class="chip-filter" data-filter="hot"  onclick="setFilter('hot',this)">🔥 HOT</button>
+  <button class="chip-filter" data-filter="new"  onclick="setFilter('new',this)">✨ NEW TODAY</button>
+  <button class="chip-filter" data-filter="drop" onclick="setFilter('drop',this)">📉 PRICE DROP</button>
+  <button class="chip-filter" data-filter="watch" onclick="setFilter('watch',this)">👀 WATCH</button>
+</div>
+
+<div class="section-hdr" id="listingCount">%%LISTING_COUNT%%</div>
+<div id="cardList">
+%%LISTING_CARDS%%
+</div>
+
+<div class="pulse">
+%%MARKET_PULSE%%
+</div>
+
+<details class="gone-section">
+  <summary>%%GONE_SUMMARY%%</summary>
+  <div class="gone-chips">
+%%GONE_CHIPS%%
+  </div>
+</details>
+
+</div>
+<script>
+(function(){
+  var saved = localStorage.getItem('cayenne-filter') || 'all';
+  var btn = document.querySelector('[data-filter="'+saved+'"]');
+  if(btn){ btn.click(); }
+
+  function updateCount(){
+    var cards = document.querySelectorAll('#cardList .card');
+    var visible = 0;
+    cards.forEach(function(c){ if(!c.hidden) visible++; });
+    var el = document.getElementById('listingCount');
+    if(el) el.textContent = visible + ' listing' + (visible!==1?'s':'') + ' shown';
+  }
+
+  window.setFilter = function(f, btn){
+    document.querySelectorAll('.chip-filter').forEach(function(b){ b.classList.remove('active'); });
+    btn.classList.add('active');
+    localStorage.setItem('cayenne-filter', f);
+    document.querySelectorAll('#cardList .card').forEach(function(card){
+      if(f === 'all'){
+        card.hidden = false;
+      } else if(f === 'hot'){
+        card.hidden = card.dataset.tier !== 'hot' && card.dataset.tier !== 'gem';
+      } else if(f === 'new'){
+        card.hidden = card.dataset.new !== 'true';
+      } else if(f === 'drop'){
+        card.hidden = card.dataset.priceDrop !== 'true';
+      } else if(f === 'watch'){
+        card.hidden = card.dataset.tier !== 'watch';
+      }
+    });
+    updateCount();
+  };
+
+  window.toggleAnalysis = function(btn){
+    var card = btn.closest('.card');
+    var analysis = card.querySelector('.analysis-text');
+    if(analysis.hidden){
+      analysis.hidden = false;
+      btn.textContent = '− Analysis';
+    } else {
+      analysis.hidden = true;
+      btn.textContent = '+ Analysis';
+    }
+  };
+
+  updateCount();
+})();
+</script>
+</body>
+</html>
