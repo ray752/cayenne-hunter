@@ -1,0 +1,1664 @@
+{
+  "meta": {
+    "version": "1.1",
+    "created": "2026-03-16",
+    "last_scan": "2026-03-24",
+    "total_scans": 8,
+    "spec": {
+      "model": "Cayenne S (955)",
+      "engine": "4.5L V8 NA 340PS",
+      "years": "2003-2006",
+      "budget_car": "5000-7500",
+      "budget_allin": "10000",
+      "mileage_max": 200000,
+      "mileage_sweet": "120000-170000"
+    }
+  },
+  "scoring_rubric": {
+    "description": "0-100 composite score. Higher = better deal. Gem threshold: 78+ (revised down from 85 based on observed market — best realistic S scores ~80-83).",
+    "weights": {
+      "price_value": {
+        "max": 25,
+        "rules": "Under €5k=25, €5-6k=22, €6-7k=18, €7-8k=14, €8-9k=10, €9-10k=6"
+      },
+      "mileage": {
+        "max": 20,
+        "rules": "Under 100k=20, 100-130k=18, 130-160k=15, 160-180k=12, 180-200k=8, 200k+=4"
+      },
+      "condition": {
+        "max": 20,
+        "rules": "Unfallfrei+Scheckheft=20, Unfallfrei=15, No info=8, Accident=0"
+      },
+      "color_match": {
+        "max": 15,
+        "rules": "Black/Dark grey=15, Dark blue/green=13, Silver/grey=8, Light/other=5"
+      },
+      "seller_trust": {
+        "max": 10,
+        "rules": "Dealer 4.5+=10, Dealer 4+=8, Dealer 3+=5, Private=6, Dealer <3=3"
+      },
+      "mod_readiness": {
+        "max": 10,
+        "rules": "Steel springs+dark color+under budget=10, Steel+budget=7, Air susp=-10 REJECT"
+      }
+    },
+    "gem_threshold": 78,
+    "good_threshold": 70,
+    "alert_thresholds": {
+      "78_plus": "🚨 HIGH ALERT — GEM. Move immediately. Expected shelf life: <24h.",
+      "70_to_77": "⚡ HOT LEAD. Act within hours. Likely <24-48h shelf life.",
+      "60_to_69": "⚠️ Watch. May linger but verify suspension/condition.",
+      "below_60": "🐢 Low priority / skip if air suspension."
+    },
+    "alert_triggers": [
+      "New listing scores 78+",
+      "Known listing drops price by 10%+",
+      "Cayenne S under €5,000 appears",
+      "Sub-100k km Cayenne S under €8,000 appears"
+    ]
+  },
+  "market_velocity": {
+    "_note": "Running average days-on-market per score band. Updated whenever listings are confirmed removed/sold. Only updated on successful Chrome scans (not CHROME_NOT_CONNECTED events). Relists (same car, new ID) are NOT counted as sales.",
+    "score_80_plus": {
+      "sample_size": 1,
+      "avg_days": 1.0,
+      "fastest": 1,
+      "slowest": 1,
+      "examples": [
+        "449498498 (score 82, €5,980 Leipzig) — sold in 1 day"
+      ]
+    },
+    "score_70_79": {
+      "sample_size": 2,
+      "avg_days": 4.0,
+      "fastest": 4,
+      "slowest": 4,
+      "examples": [
+        "450414438 (score 79, €4,500 Kall) — gone in ≤4 days",
+        "450406666 (score 72, €4,500 Kehl) — gone in ≤4 days"
+      ]
+    },
+    "score_60_69": {
+      "sample_size": 6,
+      "avg_days": 2.2,
+      "fastest": 1,
+      "slowest": 4,
+      "examples": [
+        "449965549 (score 65, €6,990 Königsbrunn) — gone in 1 day",
+        "449102289 (score 68, €9,490 Hannover) — gone in 1 day",
+        "447489282 (score 60, €9,500 Neuenstein) — gone in 1 day",
+        "450621170 (score 65) — gone in ≤4 days",
+        "450575610 (score 65, €5,600) — gone in ≤4 days",
+        "450788630 (score 65, €5490) — gone in 2 days"
+      ]
+    },
+    "score_below_60": {
+      "sample_size": 4,
+      "avg_days": 2.8,
+      "fastest": 1,
+      "slowest": 6,
+      "examples": [
+        "450531020 (score 51, €6,999 Tiefenbach TechArt) — gone in 1 day",
+        "444224404 (score 59, €4990) — gone in 6 days",
+        "450971944 (score 58, €3490) — gone in 2 days",
+        "451000540 (score 55, €3999) — gone in 2 days"
+      ]
+    },
+    "last_updated": "2026-03-24",
+    "insight": "4 listings confirmed gone today. Score <60 band now avg 2.8d (4 samples). Score 60-69 avg 2.2d. NEW #1 candidate: 451096927 (Black, Scheckheft, 135k km, €6,999, score 72). Still tracking 450540613 (score 75) as top pick."
+  },
+  "listings": {
+    "450540613": {
+      "id": "450540613",
+      "url": "https://suchen.mobile.de/fahrzeuge/details.html?id=450540613",
+      "title": "Cayenne S — Kaiserslautern (Low KM) [RELIST of 441672094]",
+      "price": 6890,
+      "price_history": [
+        {
+          "date": "2026-03-16",
+          "price": 6890,
+          "id": "441672094"
+        },
+        {
+          "date": "2026-03-17",
+          "price": 6890,
+          "id": "441672094"
+        },
+        {
+          "date": "2026-03-18",
+          "price": 6890,
+          "id": "450540613"
+        }
+      ],
+      "year": "2004-11",
+      "mileage_km": 127112,
+      "power_ps": 340,
+      "color": "Grey",
+      "seller": "G-Automobile, Kaiserslautern",
+      "seller_type": "dealer",
+      "seller_rating": 3.4,
+      "seller_reviews": 41,
+      "unfallfrei": null,
+      "service_book": false,
+      "air_suspension": false,
+      "spec_tags": [
+        "Klimaautomatik",
+        "Einparkhilfe V+H",
+        "AHK 3500kg"
+      ],
+      "score": 75,
+      "score_breakdown": {
+        "price_value": 18,
+        "mileage": 18,
+        "condition": 8,
+        "color_match": 8,
+        "seller_trust": 5,
+        "mod_readiness": 10
+      },
+      "first_seen": "2026-03-16",
+      "last_seen": "2026-03-22",
+      "days_active": 6,
+      "effective_days_on_market": 3,
+      "status": "active",
+      "relist_note": "RELISTED: Original ID 441672094 showed 'nicht mehr verfügbar' on 2026-03-18 but same car appeared as 450540613 same day. Dealer refreshed the listing ID to appear 'new' in sort order. Car has been on market effectively 3 days now.",
+      "haggle_target": "5800-6200",
+      "urgency_note": "⚠️ HOT: avg shelf life ~4.0d. Act within hours.",
+      "notes": "Lowest mileage S on the market (127k km). Dealer relisted under new ID to appear fresh. Being active 3+ days = mild leverage for negotiation. Still the best mileage play after Kall (if Kall engine issue is real). Must confirm Unfallfrei. G-Automobile 3.4★ — negotiate firmly.",
+      "badge": "best_mileage"
+    },
+    "449623949": {
+      "id": "449623949",
+      "url": "https://suchen.mobile.de/fahrzeuge/details.html?id=449623949",
+      "title": "Cayenne S — Bielefeld (Basaltschwarz, AIR SUSP) ⛔ SKIP",
+      "price": 5950,
+      "price_history": [
+        {
+          "date": "2026-03-18",
+          "price": 5950
+        }
+      ],
+      "year": "2004-01",
+      "mileage_km": 196000,
+      "power_ps": 340,
+      "color": "Black Metallic",
+      "color_detail": "Basaltschwarz-Metallic",
+      "seller": "Privatanbieter — Bielefeld",
+      "seller_type": "private",
+      "seller_rating": null,
+      "seller_reviews": null,
+      "unfallfrei": true,
+      "service_book": null,
+      "air_suspension": true,
+      "tuv_until": "2026-03",
+      "spec_tags": [
+        "Unfallfrei",
+        "2-Zonen-Klimaautomatik",
+        "Bi-Xenon",
+        "Schiebedach",
+        "Sitzheizung",
+        "Xenonscheinwerfer",
+        "Navigationssystem",
+        "Leichtmetallfelgen",
+        "AHK abnehmbar"
+      ],
+      "score": 56,
+      "score_breakdown": {
+        "price_value": 22,
+        "mileage": 8,
+        "condition": 15,
+        "color_match": 15,
+        "seller_trust": 6,
+        "mod_readiness": -10
+      },
+      "first_seen": "2026-03-18",
+      "last_seen": "2026-03-22",
+      "days_active": 4,
+      "status": "active",
+      "recommendation": "SKIP — Luftfederung confirmed in equipment list. TÜV 03/2026 = already at limit/expired. Price + €1,200 = €7,150 = just under €7,500 exception threshold, but with expired TÜV this doesn't work.",
+      "haggle_target": "4500-5000",
+      "urgency_note": "🐢 Low priority.",
+      "notes": "SKIP. Luftfederung explicitly in equipment list. Beautiful Basaltschwarz paint + Unfallfrei is attractive but air suspension kills it. TÜV listed as 03/2026 = this month or already expired. Multiple good extras (Bi-Xenon, Schiebedach, 2-zone climate) but they don't help with the suspension problem.",
+      "badge": "skip",
+      "slow_mover": true
+    },
+    "450012443": {
+      "id": "450012443",
+      "url": "https://suchen.mobile.de/fahrzeuge/details.html?id=450012443",
+      "title": "Cayenne S — Waiblingen (Black, Air Susp) ⛔ SKIP",
+      "price": 6300,
+      "price_history": [
+        {
+          "date": "2026-03-16",
+          "price": 6300
+        },
+        {
+          "date": "2026-03-17",
+          "price": 6300
+        },
+        {
+          "date": "2026-03-18",
+          "price": 6300
+        }
+      ],
+      "year": "2005-12",
+      "mileage_km": 178034,
+      "power_ps": 340,
+      "color": "Black",
+      "seller": "Private — current owner since 2012, but 5 total owners",
+      "seller_type": "private",
+      "seller_rating": null,
+      "seller_reviews": null,
+      "unfallfrei": true,
+      "service_book": true,
+      "air_suspension": true,
+      "num_owners": 5,
+      "tuv_until": "2026-07",
+      "spec_tags": [
+        "Scheckheft",
+        "Garage-kept",
+        "Manual A/C",
+        "Full leather black",
+        "Parking sensors F+R"
+      ],
+      "score": 55,
+      "score_breakdown": {
+        "price_value": 18,
+        "mileage": 12,
+        "condition": 15,
+        "color_match": 15,
+        "seller_trust": 5,
+        "mod_readiness": -10
+      },
+      "first_seen": "2026-03-16",
+      "last_seen": "2026-03-22",
+      "days_active": 6,
+      "status": "active",
+      "recommendation": "SKIP — air suspension disqualifies at this price. Only reconsider if price drops to €4,500–€5,000.",
+      "haggle_target": "4500-5000",
+      "urgency_note": "🐢 Low priority.",
+      "notes": "SKIP. Air suspension = guaranteed future €800-1500 repair. 3 days active with no action confirms our model. Still priced at €6,300 = not priced in.",
+      "badge": "skip",
+      "known_defects": [
+        "AIR SUSPENSION — primary disqualifier, future cost €800-1500",
+        "Tailgate gas struts worn (€40 fix)",
+        "PCM center screen defective (€150 used replacement)",
+        "5 owners total — rapid early turnover"
+      ],
+      "slow_mover": true
+    },
+    "450515114": {
+      "id": "450515114",
+      "url": "https://suchen.mobile.de/fahrzeuge/details.html?id=450515114",
+      "title": "Cayenne S — Remscheid (Green, Air Susp) ⛔ SKIP",
+      "price": 5990,
+      "price_history": [
+        {
+          "date": "2026-03-17",
+          "price": 6300
+        },
+        {
+          "date": "2026-03-18",
+          "price": 6300
+        },
+        {
+          "date": "2026-03-24",
+          "price": 5990
+        }
+      ],
+      "year": "2005-02",
+      "mileage_km": 231000,
+      "power_ps": 340,
+      "color": "Green",
+      "seller": "Privatanbieter — Remscheid",
+      "seller_type": "private",
+      "seller_rating": null,
+      "seller_reviews": null,
+      "unfallfrei": true,
+      "service_book": null,
+      "air_suspension": true,
+      "num_owners": 4,
+      "tuv_until": "2027-09",
+      "spec_tags": [
+        "Unfallfrei",
+        "2-Zonen Klimaautomatik",
+        "Bi-Xenon",
+        "BOSE",
+        "Memory seats",
+        "Full black leather",
+        "Berganfahrassistent",
+        "Parking sensors F+R"
+      ],
+      "score": -10,
+      "score_breakdown": {
+        "price_value": 18,
+        "mileage": 4,
+        "condition": 15,
+        "color_match": 13,
+        "seller_trust": 6,
+        "mod_readiness": -10
+      },
+      "first_seen": "2026-03-17",
+      "last_seen": "2026-03-22",
+      "days_active": 5,
+      "status": "active",
+      "recommendation": "SKIP — air suspension confirmed. CEL on. Price + €1,200 = €7,500 = borderline, but CEL + broken sensors make it not worth it.",
+      "haggle_target": "5000-5500",
+      "urgency_note": "🚫 SKIP unless price drops to fund steel conversion.",
+      "notes": "SKIP. Luftfederung + check engine light (lambda sensor) + reverse sensor broken. Could reconsider only at ~€5,000 to pre-fund steel conversion + repairs. Price drop: €6300 → €5,990 on 2026-03-24.",
+      "badge": "skip",
+      "known_defects": [
+        "AIR SUSPENSION — confirmed",
+        "Check engine light ON — Lambda sensor faulty",
+        "Reverse parking sensor broken",
+        "Non-original catalytic converter not recognized by ECU",
+        "Keyless Go not working",
+        "Scratches and dents"
+      ],
+      "slow_mover": true
+    },
+    "449099292": {
+      "id": "449099292",
+      "url": "https://suchen.mobile.de/fahrzeuge/details.html?id=449099292",
+      "title": "Cayenne S — Neuenstein (Black, Full History) 🏅 Best Negotiation Play",
+      "price": 9500,
+      "price_history": [
+        {
+          "date": "2026-03-18",
+          "price": 9500
+        }
+      ],
+      "year": "2003-08",
+      "mileage_km": 158500,
+      "power_ps": 340,
+      "color": "Black",
+      "color_detail": "Schwarz",
+      "seller": "Privatanbieter — Neuenstein (74632)",
+      "seller_type": "private",
+      "seller_rating": null,
+      "seller_reviews": null,
+      "unfallfrei": true,
+      "service_book": true,
+      "air_suspension": false,
+      "num_owners": 4,
+      "tuv_until": "2027-08",
+      "spec_tags": [
+        "Unfallfrei",
+        "Scheckheftgepflegt",
+        "Black",
+        "Vollleder Schwarz",
+        "4-Zonen-Klimaautomatik",
+        "Kamera V+H",
+        "Schiebedach",
+        "AHK",
+        "Alarmanlage",
+        "Beheizb. Lenkrad",
+        "Android Auto",
+        "Apple CarPlay",
+        "DAB Radio"
+      ],
+      "score": 69,
+      "score_breakdown": {
+        "price_value": 6,
+        "mileage": 15,
+        "condition": 20,
+        "color_match": 15,
+        "seller_trust": 6,
+        "mod_readiness": 7
+      },
+      "first_seen": "2026-03-18",
+      "last_seen": "2026-03-22",
+      "days_active": 4,
+      "online_since": "2026-03-01",
+      "effective_days_on_market": 17,
+      "status": "active",
+      "haggle_target": "7500-8000",
+      "urgency_note": "👀 Monitor. Typically lasts ~2.2d at this score.",
+      "notes": "BEST NEGOTIATION PLAY on market. Perfect condition profile: Unfallfrei + Scheckheft + Black + 158.5k km + TÜV 08/2027. Score 69 at asking €9,500 but has been on market 17+ DAYS — strong leverage. Seller explicitly said \"price only negotiable in person\" = they have room. Known minor issues: Leuchtweitenregulierung warning (says it works fine), glove box doesn't open (minor). 4 owners. Rich spec: 4-zone climate, surround camera, sunroof, Apple CarPlay, DAB. Could be related to old Neuenstein listing (447489282) or genuinely older listing from before our tracking started. Target: visit, inspect, offer €7,500-8,000.",
+      "known_defects": [
+        "Leuchtweitenregelung warning (checked — functional)",
+        "Glove box doesn't open (minor fix)",
+        "Minor cosmetic blemishes (visible in photos)",
+        "4 owners total"
+      ],
+      "badge": "best_negotiation",
+      "slow_mover": true
+    },
+    "450506496": {
+      "id": "450506496",
+      "url": "https://suchen.mobile.de/fahrzeuge/details.html?id=450506496",
+      "title": "Cayenne S — Haiger (Black, TÜV 07/2027)",
+      "price": 5999,
+      "price_history": [
+        {
+          "date": "2026-03-18",
+          "price": 5999
+        }
+      ],
+      "year": "2005-05",
+      "mileage_km": 209000,
+      "power_ps": 340,
+      "color": "Black",
+      "color_detail": "BLACK",
+      "seller": "Privatanbieter — Haiger (35708)",
+      "seller_type": "private",
+      "seller_rating": null,
+      "seller_reviews": null,
+      "unfallfrei": false,
+      "service_book": false,
+      "air_suspension": false,
+      "tuv_until": "2027-07",
+      "spec_tags": [
+        "ABS",
+        "AHK fest",
+        "Bluetooth",
+        "Freisprecheinrichtung",
+        "Leichtmetallfelgen",
+        "Navigationssystem",
+        "Sitzheizung",
+        "Tempomat"
+      ],
+      "score": 65,
+      "score_breakdown": {
+        "price_value": 22,
+        "mileage": 4,
+        "condition": 8,
+        "color_match": 15,
+        "seller_trust": 6,
+        "mod_readiness": 10
+      },
+      "first_seen": "2026-03-18",
+      "last_seen": "2026-03-22",
+      "days_active": 4,
+      "status": "active",
+      "haggle_target": "4800-5200",
+      "urgency_note": "👀 Monitor. Typically lasts ~2.2d at this score.",
+      "notes": "Black, TÜV 07/2027 (good). Fresh work done: tires, brake pads, spark plugs, battery, starter motor, oil change, tow hitch. DEREGISTERED (Abgemeldet). Known defects: coolant expansion tank leaking (€50-150 fix), panoramic sunroof not working (covered with protective film). No Unfallfrei, no Scheckheft. 209k km is high. Haiger is ~1h north of Frankfurt.",
+      "known_defects": [
+        "Kühlmittelausgleichsbehälter undicht — coolant expansion tank leaking (cheap fix)",
+        "Panoramadach ohne Funktion — sunroof dead, covered with film",
+        "Optische Mängel — cosmetic damage",
+        "DEREGISTERED — needs re-registration"
+      ],
+      "badge": null,
+      "slow_mover": true
+    },
+    "450612922": {
+      "id": "450612922",
+      "url": "https://suchen.mobile.de/fahrzeuge/details.html?id=450612922",
+      "title": "Cayenne S — Heide (Black, Scheckheft, TÜV 07/2027)",
+      "price": 6900,
+      "price_history": [
+        {
+          "date": "2026-03-18",
+          "price": 6900
+        }
+      ],
+      "year": "2005-03",
+      "mileage_km": 243500,
+      "power_ps": 340,
+      "color": "Black",
+      "color_detail": "BLACK",
+      "seller": "Privatanbieter — Heide (25746)",
+      "seller_type": "private",
+      "seller_rating": null,
+      "seller_reviews": null,
+      "unfallfrei": false,
+      "service_book": true,
+      "air_suspension": false,
+      "tuv_until": "2027-07",
+      "spec_tags": [
+        "Scheckheftgepflegt",
+        "ABS",
+        "AHK fest",
+        "Leichtmetallfelgen",
+        "Navigationssystem",
+        "Sitzheizung",
+        "Tempomat",
+        "20 Zoll Alufelgen"
+      ],
+      "score": 61,
+      "score_breakdown": {
+        "price_value": 18,
+        "mileage": 4,
+        "condition": 8,
+        "color_match": 15,
+        "seller_trust": 6,
+        "mod_readiness": 10
+      },
+      "first_seen": "2026-03-18",
+      "last_seen": "2026-03-22",
+      "days_active": 4,
+      "status": "active",
+      "haggle_target": "5500-6000",
+      "urgency_note": "👀 Monitor. Typically lasts ~2.2d at this score.",
+      "notes": "Black, Scheckheft, TÜV 07/2027, garage-kept. Seller says no Wartungsstau, good paint condition, recent oil service, new all-season tires, 20\" wheels. Defect: tailgate latch only opens manually (must hold while loading). No Unfallfrei declared. 243.5k km is high drag on score. Far north Germany (Schleswig-Holstein). Price of €6,900 is high for 243k km.",
+      "known_defects": [
+        "Kofferraumklappe öffnet nur manuell — tailgate latch broken (€20-50 fix)",
+        "No Unfallfrei declared",
+        "243,500 km — high"
+      ],
+      "badge": null,
+      "slow_mover": true
+    },
+    "450607597": {
+      "id": "450607597",
+      "url": "https://suchen.mobile.de/fahrzeuge/details.html?id=450607597",
+      "title": "Cayenne S — Filderstadt (Black Wrapped, Unfallfrei, TÜV 03/2028)",
+      "price": 8950,
+      "price_history": [
+        {
+          "date": "2026-03-18",
+          "price": 8950
+        }
+      ],
+      "year": "2005-03",
+      "mileage_km": 190000,
+      "power_ps": 340,
+      "color": "Black (wrapped)",
+      "color_detail": "BLACK wrap over silver parts",
+      "seller": "Privatanbieter — Filderstadt (70794)",
+      "seller_type": "private",
+      "seller_rating": null,
+      "seller_reviews": null,
+      "unfallfrei": true,
+      "service_book": false,
+      "air_suspension": false,
+      "tuv_until": "2028-03",
+      "spec_tags": [
+        "Unfallfrei",
+        "ABS",
+        "AHK fest",
+        "Leichtmetallfelgen",
+        "Sitzheizung",
+        "Tempomat"
+      ],
+      "score": 61,
+      "score_breakdown": {
+        "price_value": 10,
+        "mileage": 8,
+        "condition": 15,
+        "color_match": 15,
+        "seller_trust": 6,
+        "mod_readiness": 7
+      },
+      "first_seen": "2026-03-18",
+      "last_seen": "2026-03-22",
+      "days_active": 4,
+      "status": "active",
+      "haggle_target": "7500-8000",
+      "urgency_note": "👀 Monitor. Typically lasts ~2.2d at this score.",
+      "notes": "Black (wrapped — silver parts extensively foiled black), Unfallfrei, TÜV 03/2028, Youngtimerversicherung möglich (€230/yr). Fresh tires (Ganzjahresreifen). Known defects: Navi ohne Funktion, CD drive broken, Leuchtweitenregelung warning (says functional). €8,950 is aggressive for 190k km private. No Scheckheft. Filderstadt is south of Stuttgart. Could negotiate to €7,500-8,000.",
+      "known_defects": [
+        "Navigation system not working",
+        "CD drive broken",
+        "Leuchtweitenregelung warning (claims functional)",
+        "No Scheckheft",
+        "Silver body parts wrapped black — unclear condition underneath"
+      ],
+      "badge": null,
+      "slow_mover": true
+    },
+    "450471027": {
+      "id": "450471027",
+      "url": "https://suchen.mobile.de/fahrzeuge/details.html?id=450471027",
+      "title": "Cayenne S — Jevenstedt (Green, Bastlerfahrzeug)",
+      "price": 4500,
+      "price_history": [
+        {
+          "date": "2026-03-18",
+          "price": 4500
+        }
+      ],
+      "year": "2003-02",
+      "mileage_km": 252000,
+      "power_ps": 340,
+      "color": "Green",
+      "color_detail": "Grün / GREEN",
+      "seller": "Privatanbieter — Jevenstedt (24808)",
+      "seller_type": "private",
+      "seller_rating": null,
+      "seller_reviews": null,
+      "unfallfrei": false,
+      "service_book": false,
+      "air_suspension": false,
+      "tuv_until": "2026-06",
+      "spec_tags": [
+        "ABS",
+        "AHK fest",
+        "Leichtmetallfelgen",
+        "Navigationssystem",
+        "Sitzheizung"
+      ],
+      "score": 55,
+      "score_breakdown": {
+        "price_value": 25,
+        "mileage": 4,
+        "condition": 8,
+        "color_match": 5,
+        "seller_trust": 6,
+        "mod_readiness": 7
+      },
+      "first_seen": "2026-03-18",
+      "last_seen": "2026-03-22",
+      "days_active": 4,
+      "status": "active",
+      "urgency_note": "🐢 Low priority.",
+      "notes": "Bastlerfahrzeug (project/DIY car). Green exterior, beige interior. \"The car drives, brakes and steers exactly as a car should.\" Honest seller. Known issues: headlights must be replaced for next TÜV, tires must be replaced. TÜV 06/2026 = 3 months. Only 1 key. 252k km. Jevenstedt is in Schleswig-Holstein, ~30min west of Kiel. Cheap V8 fun or parts source.",
+      "known_defects": [
+        "Scheinwerfer müssen erneuert werden — headlights need replacing for TÜV",
+        "Reifen müssen erneuert werden — tires need replacing for TÜV",
+        "TÜV expires 06/2026 (3 months)",
+        "Only 1 key",
+        "No Unfallfrei, no Scheckheft",
+        "252,000 km"
+      ],
+      "badge": null,
+      "slow_mover": true
+    },
+    "450913188": {
+      "id": "450913188",
+      "url": "https://suchen.mobile.de/fahrzeuge/details.html?id=450913188",
+      "title": "Cayenne S — Kehl (Black, 200k km) ⚠️ WATCH",
+      "price": 4500,
+      "price_history": [
+        {
+          "date": "2026-03-22",
+          "price": 4500
+        }
+      ],
+      "year": "2004-03",
+      "mileage_km": 200000,
+      "power_ps": 340,
+      "color": "Black",
+      "color_detail": "BLACK (per listing)",
+      "seller": "Private — Kehl (Spanish-titled listing)",
+      "seller_type": "private",
+      "seller_rating": null,
+      "unfallfrei": null,
+      "service_book": true,
+      "air_suspension": false,
+      "tuv_until": null,
+      "spec_tags": [
+        "ABS",
+        "Bluetooth",
+        "Freisprecheinrichtung",
+        "Navigationssystem",
+        "Scheckheftgepflegt",
+        "Sitzheizung",
+        "Tuner/Radio"
+      ],
+      "score": 68,
+      "score_breakdown": {
+        "price_value": 25,
+        "mileage": 4,
+        "condition": 8,
+        "color_match": 15,
+        "seller_trust": 6,
+        "mod_readiness": 10
+      },
+      "first_seen": "2026-03-22",
+      "last_seen": "2026-03-22",
+      "days_active": 0,
+      "status": "active",
+      "slow_mover": false,
+      "haggle_target": "4000-4200",
+      "urgency_note": "👀 Monitor. Typically lasts ~2.2d at this score.",
+      "notes": "NEW #1 CANDIDATE. BLACK + Scheckheftgepflegt + €4,500 + 200k km. Score 68 conservatively (no explicit Unfallfrei). If Unfallfrei is true = 25+4+20+15+6+10 = 80 → GEM territory. Call seller to confirm Unfallfrei status. Steel springs confirmed (no Luftfederung). Spanish documentation possible (near French/German border).",
+      "badge": "watch_gem_potential"
+    },
+    "450976040": {
+      "id": "450976040",
+      "url": "https://suchen.mobile.de/fahrzeuge/details.html?id=450976040",
+      "title": "Cayenne S — Grünwald (Dark Blue, 227k km, 2nd owner)",
+      "price": 5990,
+      "price_history": [
+        {
+          "date": "2026-03-22",
+          "price": 5990
+        }
+      ],
+      "year": "2003-10",
+      "mileage_km": 227000,
+      "power_ps": 340,
+      "color": "Dark Blue",
+      "color_detail": "BLUE — seller says 'elegantes Dunkelblau'",
+      "seller": "Private — Grünwald",
+      "seller_type": "private",
+      "seller_rating": null,
+      "unfallfrei": null,
+      "service_book": null,
+      "air_suspension": false,
+      "tuv_until": null,
+      "spec_tags": [
+        "ABS",
+        "Anhängerkupplung fest",
+        "Leichtmetallfelgen",
+        "Navigationssystem",
+        "Sitzheizung",
+        "Tempomat",
+        "Tuner/Radio"
+      ],
+      "score": 63,
+      "score_breakdown": {
+        "price_value": 22,
+        "mileage": 4,
+        "condition": 8,
+        "color_match": 13,
+        "seller_trust": 6,
+        "mod_readiness": 10
+      },
+      "first_seen": "2026-03-22",
+      "last_seen": "2026-03-22",
+      "days_active": 0,
+      "status": "active",
+      "slow_mover": false,
+      "haggle_target": "5200-5500",
+      "urgency_note": "👀 Monitor. Typically lasts ~2.2d at this score.",
+      "notes": "2nd owner (zweiter Hand). Seller describes 'elegantes Dunkelblau' = dark blue, great for mods. TÜV expired but included in price. Currently deregistered (abgemeldet). No Unfallfrei mentioned. 2003 = oldest gen. Worth negotiating down to €5,200-5,500.",
+      "badge": "watch"
+    },
+    "450951091": {
+      "id": "450951091",
+      "url": "https://suchen.mobile.de/fahrzeuge/details.html?id=450951091",
+      "title": "Cayenne S — Salzgitter (TechArt Luftfahrwerk) ❌ AIR SUSP",
+      "price": 3800,
+      "price_history": [
+        {
+          "date": "2026-03-22",
+          "price": 3800
+        }
+      ],
+      "year": "2005-11",
+      "mileage_km": 305161,
+      "power_ps": 340,
+      "color": "Unknown",
+      "seller": "Private — Salzgitter",
+      "seller_type": "private",
+      "air_suspension": true,
+      "score": -10,
+      "score_breakdown": {
+        "price_value": 25,
+        "mileage": 4,
+        "condition": 8,
+        "color_match": 5,
+        "seller_trust": 6,
+        "mod_readiness": -10
+      },
+      "first_seen": "2026-03-22",
+      "last_seen": "2026-03-22",
+      "days_active": 0,
+      "status": "active",
+      "urgency_note": "🚫 SKIP unless price drops to fund steel conversion.",
+      "notes": "TechArt air suspension. Title: 'TechArt Luftfahrwerk'. Auto-rejected.",
+      "badge": "rejected_air_suspension"
+    },
+    "450933159": {
+      "id": "450933159",
+      "url": "https://suchen.mobile.de/fahrzeuge/details.html?id=450933159",
+      "title": "Cayenne S — Marktredwitz (Blau Metallic, Unfallfrei) ❌ AIR SUSP",
+      "price": 6900,
+      "price_history": [
+        {
+          "date": "2026-03-22",
+          "price": 6900
+        }
+      ],
+      "year": "2006-11",
+      "mileage_km": 228300,
+      "power_ps": 340,
+      "color": "Blau Metallic",
+      "seller": "Private — Marktredwitz",
+      "seller_type": "private",
+      "unfallfrei": true,
+      "service_book": true,
+      "air_suspension": true,
+      "tuv_until": "2026-11",
+      "score": -10,
+      "score_breakdown": {
+        "price_value": 18,
+        "mileage": 4,
+        "condition": 20,
+        "color_match": 13,
+        "seller_trust": 6,
+        "mod_readiness": -10
+      },
+      "first_seen": "2026-03-22",
+      "last_seen": "2026-03-22",
+      "days_active": 0,
+      "status": "active",
+      "urgency_note": "🚫 SKIP unless price drops to fund steel conversion.",
+      "notes": "Tempting: Unfallfrei + Scheckheft + Blau Metallic + TÜV 11/2026 + negotiable. But Luftfederung in equipment list. 3 owners. €6,900+€1,200=€8,100 > budget. SKIP.",
+      "badge": "rejected_air_suspension"
+    },
+    "451096927": {
+      "title": "Porsche Cayenne S Scheckheftgepflegt",
+      "price": 6999,
+      "mileage": 135000,
+      "year": "2006-07",
+      "power": "250kW/340PS",
+      "color": "Black",
+      "location": "89073 Ulm",
+      "seller": "Privatanbieter",
+      "seller_rating": null,
+      "unfallfrei": false,
+      "scheckheft": true,
+      "suspension": "steel_assumed",
+      "hu": "02/2027",
+      "owners": 5,
+      "known_issues": "Abblendlicht warning, Kurvenlicht warning, slow tailgate, AC noise at full blast",
+      "equipment": [
+        "ABS",
+        "Anhängerkupplung",
+        "Scheckheftgepflegt",
+        "Tuner/Radio",
+        "Klimaanlage",
+        "Einparkhilfe hinten",
+        "Panoramadach"
+      ],
+      "url": "https://suchen.mobile.de/fahrzeuge/details.html?id=451096927",
+      "first_seen": "2026-03-24",
+      "status": "active",
+      "score": 72,
+      "score_breakdown": {
+        "price": 18,
+        "mileage": 15,
+        "condition": 8,
+        "color": 15,
+        "seller": 6,
+        "mod_readiness": 10
+      },
+      "urgency_note": "⚠️ HOT: avg shelf life ~4.0d. Act within hours.",
+      "notes": "Best new find this scan. Black, Scheckheft, 135k km, steel springs likely. 5 owners is a concern. Minor electrical warnings. Manual check recommended.",
+      "price_history": [
+        {
+          "date": "2026-03-24",
+          "price": 6999
+        }
+      ]
+    },
+    "451015573": {
+      "title": "Porsche Cayenne S",
+      "price": 8700,
+      "mileage": 143560,
+      "year": "2006-01",
+      "power": "250kW/340PS",
+      "color": "Black",
+      "location": "13465 Reinickendorf (Berlin)",
+      "seller": "Privatanbieter",
+      "seller_rating": null,
+      "unfallfrei": false,
+      "scheckheft": false,
+      "suspension": "air",
+      "url": "https://suchen.mobile.de/fahrzeuge/details.html?id=451015573",
+      "first_seen": "2026-03-24",
+      "status": "active",
+      "score": -10,
+      "score_breakdown": {
+        "price": 10,
+        "mileage": 15,
+        "condition": 8,
+        "color": 15,
+        "seller": 6,
+        "mod_readiness": -10
+      },
+      "urgency_note": "🚫 SKIP — air suspension, price too high for steel conversion.",
+      "notes": "Air suspension auto-reject. €8,700 + €1,200 conversion = €9,900 >> €7,500 threshold.",
+      "price_history": [
+        {
+          "date": "2026-03-24",
+          "price": 8700
+        }
+      ]
+    },
+    "449966601": {
+      "title": "Porsche Cayenne S",
+      "price": 7490,
+      "mileage": 186000,
+      "year": "2006-01",
+      "power": "250kW/340PS",
+      "color": "Black (Schwarz)",
+      "location": "81249 München",
+      "seller": "Privatanbieter",
+      "seller_rating": null,
+      "unfallfrei": true,
+      "scheckheft": false,
+      "suspension": "air",
+      "owners": 3,
+      "hu": "01/2027",
+      "url": "https://suchen.mobile.de/fahrzeuge/details.html?id=449966601",
+      "first_seen": "2026-03-24",
+      "status": "active",
+      "score": -10,
+      "score_breakdown": {
+        "price": 14,
+        "mileage": 8,
+        "condition": 15,
+        "color": 15,
+        "seller": 6,
+        "mod_readiness": -10
+      },
+      "urgency_note": "🚫 SKIP — air suspension, price too high for steel conversion.",
+      "notes": "Air suspension auto-reject. Unfallfrei, 3 owners, good condition otherwise. €7,490 + €1,200 = €8,690 >> €7,500.",
+      "price_history": [
+        {
+          "date": "2026-03-24",
+          "price": 7490
+        }
+      ]
+    },
+    "451105460": {
+      "title": "Porsche Cayenne S 4.5 V8 Top Zustand Scheckheftgepflegt",
+      "price": 4999,
+      "mileage": 200000,
+      "year": "2005-03",
+      "power": "250kW/340PS",
+      "color": "Silver/Champagne",
+      "location": "81677 Bogenhausen (München)",
+      "seller": "Privatanbieter",
+      "seller_rating": null,
+      "unfallfrei": false,
+      "scheckheft": true,
+      "suspension": "steel_assumed",
+      "transmission": "Schaltgetriebe (MANUAL)",
+      "url": "https://suchen.mobile.de/fahrzeuge/details.html?id=451105460",
+      "first_seen": "2026-03-24",
+      "status": "active",
+      "score": 62,
+      "score_breakdown": {
+        "price": 25,
+        "mileage": 8,
+        "condition": 8,
+        "color": 8,
+        "seller": 6,
+        "mod_readiness": 7
+      },
+      "urgency_note": "👀 Monitor. Typically lasts ~2.2d at this score.",
+      "notes": "RARE manual transmission! Silver color hurts score. Scheckheft, well-equipped. Vollausstattung claimed.",
+      "price_history": [
+        {
+          "date": "2026-03-24",
+          "price": 4999
+        }
+      ]
+    },
+    "451165610": {
+      "title": "Porsche Cayenne S",
+      "price": 9250,
+      "mileage": 159300,
+      "year": "2003-08",
+      "power": "250kW/340PS",
+      "color": "Black",
+      "location": "74632 Neuenstein",
+      "seller": "Privatanbieter",
+      "seller_rating": null,
+      "unfallfrei": false,
+      "scheckheft": true,
+      "suspension": "steel_assumed",
+      "hu": "08/2027",
+      "url": "https://suchen.mobile.de/fahrzeuge/details.html?id=451165610",
+      "first_seen": "2026-03-24",
+      "status": "active",
+      "score": 57,
+      "score_breakdown": {
+        "price": 6,
+        "mileage": 15,
+        "condition": 8,
+        "color": 15,
+        "seller": 6,
+        "mod_readiness": 7
+      },
+      "urgency_note": "🐢 Low priority. Overpriced for specs.",
+      "notes": "Same Neuenstein location as 449099292 — possibly same seller. Scheckheft, Black, good mileage but €9,250 is too high.",
+      "price_history": [
+        {
+          "date": "2026-03-24",
+          "price": 9250
+        }
+      ]
+    },
+    "451171726": {
+      "title": "Porsche Cayenne S V8",
+      "price": 5290,
+      "mileage": 210000,
+      "year": "2005-03",
+      "power": "250kW/340PS",
+      "color": "Black",
+      "location": "81825 Berg (München area)",
+      "seller": "Privatanbieter",
+      "seller_rating": null,
+      "unfallfrei": false,
+      "scheckheft": false,
+      "suspension": "steel_assumed",
+      "hu": "12/2026",
+      "url": "https://suchen.mobile.de/fahrzeuge/details.html?id=451171726",
+      "first_seen": "2026-03-24",
+      "status": "active",
+      "score": 65,
+      "score_breakdown": {
+        "price": 22,
+        "mileage": 4,
+        "condition": 8,
+        "color": 15,
+        "seller": 6,
+        "mod_readiness": 10
+      },
+      "urgency_note": "👀 Monitor. Typically lasts ~2.2d at this score.",
+      "notes": "Black, steel springs, well-equipped. Over 200k km. Enthusiastic seller description.",
+      "price_history": [
+        {
+          "date": "2026-03-24",
+          "price": 5290
+        }
+      ]
+    },
+    "446626097": {
+      "title": "Porsche Cayenne S",
+      "price": 5490,
+      "mileage": 242000,
+      "year": "2006-05",
+      "power": "250kW/340PS",
+      "color": "Unknown",
+      "location": "42389 Wuppertal",
+      "seller": "Privatanbieter",
+      "seller_rating": null,
+      "unfallfrei": false,
+      "scheckheft": false,
+      "suspension": "unknown",
+      "url": "https://suchen.mobile.de/fahrzeuge/details.html?id=446626097",
+      "first_seen": "2026-03-24",
+      "status": "active",
+      "score": 49,
+      "score_breakdown": {
+        "price": 22,
+        "mileage": 4,
+        "condition": 8,
+        "color": 5,
+        "seller": 6,
+        "mod_readiness": 4
+      },
+      "urgency_note": "🐢 Low priority. Very high mileage.",
+      "notes": "Listed since Jan 25 — 2 months old, still unsold. Very high mileage. Likely issues.",
+      "slow_mover": true,
+      "price_history": [
+        {
+          "date": "2026-03-24",
+          "price": 5490
+        }
+      ]
+    },
+    "451147493": {
+      "title": "Porsche Cayenne S 4.5L V8",
+      "price": 3999,
+      "mileage": 275000,
+      "year": "2003-04",
+      "power": "250kW/340PS",
+      "color": "Unknown",
+      "location": "19243 Wittenburg",
+      "seller": "Privatanbieter",
+      "seller_rating": null,
+      "unfallfrei": false,
+      "scheckheft": false,
+      "suspension": "steel_assumed",
+      "url": "https://suchen.mobile.de/fahrzeuge/details.html?id=451147493",
+      "first_seen": "2026-03-24",
+      "status": "active",
+      "score": 55,
+      "score_breakdown": {
+        "price": 25,
+        "mileage": 4,
+        "condition": 8,
+        "color": 5,
+        "seller": 6,
+        "mod_readiness": 7
+      },
+      "urgency_note": "🐢 Low priority. Worn brakes, minimal listing.",
+      "notes": "Bare-bones listing. 'Lenkt, fährt, bremst.' Worn brakes from standing. No HU listed.",
+      "price_history": [
+        {
+          "date": "2026-03-24",
+          "price": 3999
+        }
+      ]
+    },
+    "451141935": {
+      "title": "Porsche Cayenne S",
+      "price": 3000,
+      "mileage": 276102,
+      "year": "2003-04",
+      "power": "250kW/340PS",
+      "color": "Grey",
+      "location": "68169 Mannheim",
+      "seller": "Privatanbieter",
+      "seller_rating": null,
+      "unfallfrei": false,
+      "scheckheft": false,
+      "suspension": "steel_assumed",
+      "hu": "09/2026",
+      "known_issues": "Wasserpumpe defekt (water pump broken), Hydrostöße (hydraulic lifter issues)",
+      "url": "https://suchen.mobile.de/fahrzeuge/details.html?id=451141935",
+      "first_seen": "2026-03-24",
+      "status": "active",
+      "score": 43,
+      "score_breakdown": {
+        "price": 25,
+        "mileage": 4,
+        "condition": 0,
+        "color": 8,
+        "seller": 6,
+        "mod_readiness": 0
+      },
+      "urgency_note": "🐢 Low priority. Broken — needs water pump + lifters.",
+      "notes": "Project car. Water pump broken, hydraulic lifter issues. No exterior photos. Parts car pricing.",
+      "price_history": [
+        {
+          "date": "2026-03-24",
+          "price": 3000
+        }
+      ]
+    },
+    "451109350": {
+      "title": "Porsche Cayenne S",
+      "price": 4950,
+      "mileage": 372073,
+      "year": "2005-02",
+      "power": "250kW/340PS",
+      "color": "Unknown",
+      "location": "Unknown",
+      "seller": "Privatanbieter",
+      "seller_rating": null,
+      "suspension": "unknown",
+      "url": "https://suchen.mobile.de/fahrzeuge/details.html?id=451109350",
+      "first_seen": "2026-03-24",
+      "status": "active",
+      "score": 47,
+      "score_breakdown": {
+        "price": 25,
+        "mileage": 4,
+        "condition": 8,
+        "color": 5,
+        "seller": 6,
+        "mod_readiness": -1
+      },
+      "urgency_note": "🐢 Low priority. Extreme mileage (372k km).",
+      "notes": "372,000 km — extreme mileage even for a V8.",
+      "price_history": [
+        {
+          "date": "2026-03-24",
+          "price": 4950
+        }
+      ]
+    },
+    "448717120": {
+      "title": "Porsche Cayenne S",
+      "price": 8900,
+      "mileage": 255500,
+      "year": "2005-06",
+      "power": "250kW/340PS",
+      "color": "Unknown",
+      "location": "Unknown",
+      "seller": "Dealer",
+      "seller_rating": null,
+      "unfallfrei": true,
+      "suspension": "unknown",
+      "url": "https://suchen.mobile.de/fahrzeuge/details.html?id=448717120",
+      "first_seen": "2026-03-24",
+      "status": "active",
+      "score": 41,
+      "score_breakdown": {
+        "price": 10,
+        "mileage": 4,
+        "condition": 15,
+        "color": 5,
+        "seller": 5,
+        "mod_readiness": 2
+      },
+      "urgency_note": "🐢 Low priority. High mileage + overpriced.",
+      "notes": "255k km at €8,900 is poor value. Unfallfrei but overpriced for mileage.",
+      "price_history": [
+        {
+          "date": "2026-03-24",
+          "price": 8900
+        }
+      ]
+    },
+    "451056533": {
+      "title": "Porsche Cayenne S",
+      "price": 4850,
+      "mileage": 288000,
+      "year": "2005-11",
+      "power": "250kW/340PS",
+      "color": "Unknown",
+      "location": "Unknown",
+      "seller": "Privatanbieter",
+      "seller_rating": null,
+      "suspension": "unknown",
+      "url": "https://suchen.mobile.de/fahrzeuge/details.html?id=451056533",
+      "first_seen": "2026-03-24",
+      "status": "active",
+      "score": 48,
+      "score_breakdown": {
+        "price": 25,
+        "mileage": 4,
+        "condition": 8,
+        "color": 5,
+        "seller": 6,
+        "mod_readiness": 0
+      },
+      "urgency_note": "🐢 Low priority. Very high mileage.",
+      "notes": "288,000 km. Budget pricing but high risk at this mileage.",
+      "price_history": [
+        {
+          "date": "2026-03-24",
+          "price": 4850
+        }
+      ]
+    }
+  },
+  "removed_listings": {
+    "449498498": {
+      "id": "449498498",
+      "title": "Cayenne S — Leipzig (BEST VALUE)",
+      "price_last": 5980,
+      "score_last": 82,
+      "score_band": "80_plus",
+      "days_on_market": 1,
+      "status": "sold",
+      "first_seen": "2026-03-16",
+      "last_seen": "2026-03-16",
+      "removed_date": "2026-03-17",
+      "notes": "SOLD — confirmed gone 2026-03-17 morning scan. Was our #1 pick (score 82). Sold within ~24 hours of listing. CDS Car Direct Service, Leipzig dealer."
+    },
+    "449965549": {
+      "id": "449965549",
+      "title": "Cayenne S — Königsbrunn",
+      "price_last": 6990,
+      "score_last": 65,
+      "score_band": "60_69",
+      "days_on_market": 1,
+      "status": "sold",
+      "first_seen": "2026-03-16",
+      "last_seen": "2026-03-16",
+      "removed_date": "2026-03-17",
+      "notes": "SOLD — confirmed gone 2026-03-17. CARS34, Königsbrunn dealer."
+    },
+    "449102289": {
+      "id": "449102289",
+      "title": "Cayenne S — Hannover (Fully Loaded)",
+      "price_last": 9490,
+      "score_last": 68,
+      "score_band": "60_69",
+      "days_on_market": 1,
+      "status": "gone",
+      "first_seen": "2026-03-16",
+      "last_seen": "2026-03-16",
+      "removed_date": "2026-03-17",
+      "notes": "GONE — listing ID repurposed. Autohaus Nova, Hannover. Had air suspension anyway."
+    },
+    "447489282": {
+      "id": "447489282",
+      "title": "Cayenne S — Neuenstein (VB)",
+      "price_last": 9500,
+      "score_last": 60,
+      "score_band": "60_69",
+      "days_on_market": 1,
+      "status": "gone",
+      "first_seen": "2026-03-16",
+      "last_seen": "2026-03-16",
+      "removed_date": "2026-03-17",
+      "notes": "GONE — listing ID repurposed to Peugeot 208. Private seller Neuenstein."
+    },
+    "441672094": {
+      "id": "441672094",
+      "title": "Cayenne S — Kaiserslautern (Low KM) — RELISTED",
+      "price_last": 6890,
+      "score_last": 75,
+      "score_band": "70_79",
+      "days_on_market": 3,
+      "status": "relisted",
+      "first_seen": "2026-03-16",
+      "last_seen": "2026-03-17",
+      "removed_date": "2026-03-18",
+      "new_id": "450540613",
+      "velocity_counted": false,
+      "notes": "RELISTED as 450540613 on 2026-03-18. G-Automobile refreshed listing ID to appear 'new' in sort. Car NOT sold — still available under new ID. Was on market 3 days unsold. NOT counted in market_velocity (no confirmed sale). See 450540613 for active tracking."
+    },
+    "450531020": {
+      "id": "450531020",
+      "title": "Cayenne S — Tiefenbach Kr Passau (TechArt Magnum)",
+      "price_last": 6999,
+      "score_last": 51,
+      "score_band": "below_60",
+      "days_on_market": 1,
+      "status": "gone",
+      "first_seen": "2026-03-17",
+      "last_seen": "2026-03-17",
+      "removed_date": "2026-03-18",
+      "velocity_counted": true,
+      "notes": "GONE after 1 day. Listing shows 'nicht mehr verfügbar'. Score 51 (high mileage 245k drag). Unique TechArt Magnum 1-of-1 build. Confirmed for score_below_60 market_velocity data. May have sold or may have been pulled."
+    },
+    "450414438": {
+      "id": "450414438",
+      "title": "Cayenne S — Kall (Black, 146k km) 🚨 NEW #1",
+      "price_last": 4500,
+      "score_last": 79,
+      "score_band": "70_79",
+      "days_on_market": 4,
+      "status": "sold",
+      "first_seen": "2026-03-18",
+      "removed_date": "2026-03-22",
+      "notes": "CONFIRMED GONE 2026-03-22 — 4 days on market (scan gap 2026-03-18 to 2026-03-22, 3 missed days due to Chrome disconnects)"
+    },
+    "450406666": {
+      "id": "450406666",
+      "title": "Cayenne S — Kehl (Black, Scheckheft)",
+      "price_last": 4500,
+      "score_last": 72,
+      "score_band": "70_79",
+      "days_on_market": 4,
+      "status": "sold",
+      "first_seen": "2026-03-18",
+      "removed_date": "2026-03-22",
+      "notes": "CONFIRMED GONE 2026-03-22 — 4 days on market (scan gap 2026-03-18 to 2026-03-22, 3 missed days due to Chrome disconnects)"
+    },
+    "450621170": {
+      "id": "450621170",
+      "title": "Cayenne S — Paderborn (Black, Multiple Issues)",
+      "price_last": 3999,
+      "score_last": 65,
+      "score_band": "60_69",
+      "days_on_market": 4,
+      "status": "sold",
+      "first_seen": "2026-03-18",
+      "removed_date": "2026-03-22",
+      "notes": "CONFIRMED GONE 2026-03-22 — 4 days on market (scan gap 2026-03-18 to 2026-03-22, 3 missed days due to Chrome disconnects)"
+    },
+    "450575610": {
+      "id": "450575610",
+      "title": "Cayenne S — Bad Neustadt (Black, TÜV EXPIRED)",
+      "price_last": 5600,
+      "score_last": 65,
+      "score_band": "60_69",
+      "days_on_market": 4,
+      "status": "sold",
+      "first_seen": "2026-03-18",
+      "removed_date": "2026-03-22",
+      "notes": "CONFIRMED GONE 2026-03-22 — 4 days on market (scan gap 2026-03-18 to 2026-03-22, 3 missed days due to Chrome disconnects)"
+    },
+    "444224404": {
+      "id": "444224404",
+      "url": "https://suchen.mobile.de/fahrzeuge/details.html?id=444224404",
+      "title": "Cayenne S — München (Black, Unfallfrei, 5★ Dealer) ⛔ AIR SUSPENSION",
+      "price": 4990,
+      "price_history": [
+        {
+          "date": "2026-03-18",
+          "price": 4990
+        }
+      ],
+      "year": "2004-07",
+      "mileage_km": 232750,
+      "power_ps": 340,
+      "color": "Black Metallic",
+      "color_detail": "Schwarz Metallic",
+      "seller": "Autowelt Kaufmann GmbH — München (80809)",
+      "seller_type": "dealer",
+      "seller_rating": 5.0,
+      "seller_reviews": 151,
+      "unfallfrei": true,
+      "service_book": false,
+      "air_suspension": true,
+      "tuv_until": "2027-01",
+      "spec_tags": [
+        "Unfallfrei",
+        "Luftfederung",
+        "Schwarz Metallic",
+        "2-Zonen-Klimaautomatik",
+        "Bi-Xenon",
+        "Schiebedach",
+        "Sitzheizung V+H",
+        "Einparkhilfe V+H",
+        "Vollleder Braun",
+        "Letzter Service 2023"
+      ],
+      "score": 59,
+      "score_breakdown": {
+        "price_value": 25,
+        "mileage": 4,
+        "condition": 15,
+        "color_match": 15,
+        "seller_trust": 10,
+        "mod_readiness": -10
+      },
+      "recommendation": "SKIP — Luftfederung confirmed. Price €4,990 + €1,200 = €6,190 < €7,500 exception threshold, but at 232k km this suspension will need work. Pass unless price drops to ~€3,500.",
+      "first_seen": "2026-03-18",
+      "last_seen": "2026-03-22",
+      "days_active": 4,
+      "status": "removed",
+      "urgency_note": "🐢 Low priority. Score 59.",
+      "notes": "SKIP. Temptingly good deal on paper (Unfallfrei + Autowelt Kaufmann 5★/151 reviews + Black Metallic + €4,990) but Luftfederung is confirmed in equipment list. Last service April 2023 at 205,545km. TÜV 01/2027. Could reconsider at ~€3,500 (suspension already priced in at that point). Dealer has Inzahlungnahme option.",
+      "badge": "skip",
+      "slow_mover": true,
+      "removed_date": "2026-03-24",
+      "days_on_market": 6
+    },
+    "450788630": {
+      "id": "450788630",
+      "url": "https://suchen.mobile.de/fahrzeuge/details.html?id=450788630",
+      "title": "Cayenne S — Berg-am-Laim (Black, 210k km) ⚠️ Watch",
+      "price": 5490,
+      "price_history": [
+        {
+          "date": "2026-03-22",
+          "price": 5490
+        }
+      ],
+      "year": "2005-03",
+      "mileage_km": 210000,
+      "power_ps": 340,
+      "color": "Black",
+      "color_detail": "BLACK (per listing)",
+      "seller": "Private — Berg-am-Laim (München area)",
+      "seller_type": "private",
+      "seller_rating": null,
+      "unfallfrei": null,
+      "service_book": null,
+      "air_suspension": false,
+      "tuv_until": "2026-12",
+      "spec_tags": [
+        "Anhängerkupplung fest",
+        "Bluetooth",
+        "Freisprecheinrichtung",
+        "Leichtmetallfelgen",
+        "Navigationssystem",
+        "Sitzheizung",
+        "Tempomat",
+        "Tuner/Radio"
+      ],
+      "score": 65,
+      "score_breakdown": {
+        "price_value": 22,
+        "mileage": 4,
+        "condition": 8,
+        "color_match": 15,
+        "seller_trust": 6,
+        "mod_readiness": 10
+      },
+      "first_seen": "2026-03-22",
+      "last_seen": "2026-03-22",
+      "days_active": 0,
+      "status": "removed",
+      "slow_mover": false,
+      "haggle_target": "4800-5200",
+      "urgency_note": "👀 Monitor. Typically lasts ~2.2d at this score.",
+      "notes": "Black with valid TÜV until 12/2026. 210k km. No condition info in listing. Worth a call to verify Unfallfrei. Berg-am-Laim = München area, accessible. Title mentions 'V8/340PS/Zoll/Tüv'.",
+      "badge": "watch",
+      "removed_date": "2026-03-24",
+      "days_on_market": 2
+    },
+    "450971944": {
+      "id": "450971944",
+      "url": "https://suchen.mobile.de/fahrzeuge/details.html?id=450971944",
+      "title": "Cayenne S — Strasbourg/Kehl (Grey, 265k km, €3,490, French reg)",
+      "price": 3490,
+      "price_history": [
+        {
+          "date": "2026-03-22",
+          "price": 3490
+        }
+      ],
+      "year": "2005-04",
+      "mileage_km": 265000,
+      "power_ps": 340,
+      "color": "Grey",
+      "color_detail": "GREY",
+      "seller": "Private — Kehl/Strasbourg (French registration)",
+      "seller_type": "private",
+      "air_suspension": false,
+      "tuv_until": "2027-03",
+      "score": 58,
+      "score_breakdown": {
+        "price_value": 25,
+        "mileage": 4,
+        "condition": 8,
+        "color_match": 8,
+        "seller_trust": 6,
+        "mod_readiness": 7
+      },
+      "first_seen": "2026-03-22",
+      "last_seen": "2026-03-22",
+      "days_active": 0,
+      "status": "removed",
+      "urgency_note": "🐢 Low priority. Score 58.",
+      "notes": "French registration (Strasbourg area). 'Französische Zulassung. Besichtigung in Straßburg möglich.' TÜV 03/2027 is good. Cross-border import adds complexity. Skip unless no alternatives.",
+      "badge": "low_priority",
+      "removed_date": "2026-03-24",
+      "days_on_market": 2
+    },
+    "451000540": {
+      "id": "451000540",
+      "url": "https://suchen.mobile.de/fahrzeuge/details.html?id=451000540",
+      "title": "Cayenne S — Paderborn (296k km, €3,999)",
+      "price": 3999,
+      "price_history": [
+        {
+          "date": "2026-03-22",
+          "price": 3999
+        }
+      ],
+      "year": "2004-10",
+      "mileage_km": 295900,
+      "power_ps": 340,
+      "color": "Unknown",
+      "seller": "Unknown — Paderborn",
+      "seller_type": "unknown",
+      "air_suspension": false,
+      "tuv_until": "2026-05",
+      "score": 55,
+      "score_breakdown": {
+        "price_value": 25,
+        "mileage": 4,
+        "condition": 8,
+        "color_match": 5,
+        "seller_trust": 6,
+        "mod_readiness": 7
+      },
+      "first_seen": "2026-03-22",
+      "last_seen": "2026-03-22",
+      "days_active": 0,
+      "status": "removed",
+      "urgency_note": "🐢 Low priority. Score 55.",
+      "notes": "'Voll Fahrbereit' (fully driveable) — usually means something needs attention. 296k km at €3,999. Low priority unless inspected.",
+      "badge": "low_priority",
+      "removed_date": "2026-03-24",
+      "days_on_market": 2
+    }
+  },
+  "alerts_log": [
+    {
+      "date": "2026-03-17",
+      "type": "CHROME_NOT_CONNECTED",
+      "message": "Chrome extension was not connected when the 9:07 AM scan fired. mobile.de works fine via Chrome. The issue: user's browser wasn't open. WebFetch/brave-search tried as fallbacks but go through the VM proxy — not valid for this task.",
+      "severity": "info"
+    },
+    {
+      "date": "2026-03-17",
+      "type": "BEST_LISTING_SOLD",
+      "message": "ALERT: #1 pick (449498498 Leipzig, score 82, €5,980) is SOLD. Confirmed gone. Sold within ~24h of first listing. Market is active — do not sleep on high-score listings.",
+      "severity": "high"
+    },
+    {
+      "date": "2026-03-17",
+      "type": "MASS_REMOVAL",
+      "message": "4 out of 6 tracked listings removed overnight (449498498, 449965549, 449102289, 447489282). 2 remain active: Kaiserslautern (441672094, score 75) and Waiblingen skip (450012443). 2 new S listings added. Market clearing quickly.",
+      "severity": "high"
+    },
+    {
+      "date": "2026-03-17",
+      "type": "SYSTEM_UPDATE",
+      "message": "Tracker updated to v1.1: gem_threshold lowered from 85 to 78; market_velocity section added; urgency_note added to active listings.",
+      "severity": "info"
+    },
+    {
+      "date": "2026-03-18",
+      "type": "GEM_ALERT",
+      "message": "🚨 NEW GEM CANDIDATE: 450414438 (Kall, €4,500, 146k km, Black) scores 79. Engine caveat requires phone call first. If engine issue is minor, this is the best listing seen in this hunt. ACT FAST.",
+      "severity": "high"
+    },
+    {
+      "date": "2026-03-18",
+      "type": "DEALER_RELIST",
+      "message": "G-Automobile Kaiserslautern relisted car (441672094 → 450540613) under new ID after 3 days unsold. Classic dealer trick to refresh sort position. Car still available. Effective days on market: 3.",
+      "severity": "info"
+    },
+    {
+      "date": "2026-03-18",
+      "type": "LISTING_GONE",
+      "message": "450531020 (TechArt, €6,999, score 51) gone after 1 day. Adds data point to score_below_60 velocity band (1 day).",
+      "severity": "info"
+    },
+    {
+      "date": "2026-03-18",
+      "type": "EVENING_SCAN_COMPLETE",
+      "message": "Evening scan complete. 23 listing IDs on page 1. All 7 active listings confirmed still live. 7 new Cayenne S listings added (scores 55-69). No new gems. Best new find: 449099292 Neuenstein (score 69, 158.5k km, Unfallfrei+Scheckheft, 17 days on market — best negotiation play). Kall (450414438, score 79) remains #1 — now 2 scans/day 2 active.",
+      "severity": "info"
+    },
+    {
+      "date": "2026-03-19",
+      "type": "CHROME_NOT_CONNECTED",
+      "message": "Chrome extension was not connected when the scheduled scan fired. mobile.de works fine via Chrome — the issue is that the user's browser wasn't open or the extension wasn't active. No scan performed. No listings marked as removed. No market_velocity updates. Manual check link provided.",
+      "severity": "info"
+    },
+    {
+      "date": "2026-03-20",
+      "type": "CHROME_NOT_CONNECTED",
+      "message": "Multiple Chrome extensions connected but none active — browser wasn't connected when scan fired. No live scan performed. No listings marked as removed. No market_velocity updates. Offline updates applied: slow_mover flags recalculated, urgency notes refreshed. Manual check: https://suchen.mobile.de/fahrzeuge/search.html?dam=false&fr=2003%3A2006&ft=PETROL&pw=250%3A&isSearchRequest=true&ms=20100%3B18%3B&p=%3A10000&sb=doc&od=down&s=Car&vc=Car",
+      "severity": "info"
+    },
+    {
+      "date": "2026-03-22",
+      "type": "SCAN_COMPLETE",
+      "message": "Scan complete (Chrome connected). Page 1: 20 Cayenne S listings (newest first). REMOVALS: 4 tracked listings gone — 450414438 (score 79, 4 days), 450406666 (72, 4 days), 450621170 (65, 4 days), 450575610 (65, 4 days). Velocity updated: score_70_79 now avg 4.0d; score_60_69 now avg 2.2d. NEW #1: 450913188 (Black, Scheckheft, €4,500, 200k km, score 68 — call to verify Unfallfrei → potential 80 gem). Also added: 450788630 (Black, €5,490, score 65), 450976040 (Dark Blue, €5,990, score 63). AIR SUSP rejected: 450951091 (TechArt Luftfahrwerk), 450933159 (Luftfederung Marktredwitz), 449354473 (LUFT). 10 slow movers still active from 3/18 cohort.",
+      "severity": "info"
+    },
+    {
+      "date": "2026-03-23",
+      "type": "CHROME_NOT_CONNECTED",
+      "message": "Chrome extension was not connected when the scheduled scan fired. mobile.de works fine via Chrome — the user's browser wasn't open or the extension wasn't active. No scan performed. No listings marked as removed. No market_velocity updates. Manual check link provided.",
+      "severity": "info"
+    },
+    {
+      "date": "2026-03-24",
+      "type": "SCAN_COMPLETE",
+      "message": "Scan complete (Chrome connected). Page 1: 23 listings. 12 new S listings added. 4 tracked listings confirmed gone. Price drop on 450515114 (€6,300→€5,990). New HOT LEAD: 451096927 (score 72, Black, 135k km, €6,999, Ulm)."
+    }
+  ],
+  "market_stats": {
+    "date": "2026-03-24",
+    "total_active": 25,
+    "cayenne_s_active": 12,
+    "avg_price": 5773,
+    "min_price": 3000,
+    "max_price": 9250,
+    "total_removed": 14
+  }
+}

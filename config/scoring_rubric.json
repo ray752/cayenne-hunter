@@ -1,0 +1,129 @@
+{
+  "description": "Cayenne Hunter scoring rubric. 0-100 composite score. Gem: 78+. Good: 70+. Watch: 60+. Skip: <50.",
+  "version": "1.1",
+  "last_updated": "2026-03-22",
+  "weights": {
+    "price_value": {
+      "max": 25,
+      "rules": {
+        "under_5000": 25,
+        "5000_to_5999": 22,
+        "6000_to_6999": 18,
+        "7000_to_7999": 14,
+        "8000_to_8999": 10,
+        "9000_to_10000": 6
+      }
+    },
+    "mileage": {
+      "max": 20,
+      "rules": {
+        "under_100k": 20,
+        "100k_to_129k": 18,
+        "130k_to_159k": 15,
+        "160k_to_179k": 12,
+        "180k_to_199k": 8,
+        "200k_plus": 4
+      }
+    },
+    "condition": {
+      "max": 20,
+      "rules": {
+        "unfallfrei_plus_scheckheft": 20,
+        "unfallfrei_only": 15,
+        "no_info": 8,
+        "accident_history": 0
+      }
+    },
+    "color_match": {
+      "max": 15,
+      "rules": {
+        "black_or_dark_grey": 15,
+        "dark_blue_or_dark_green": 13,
+        "silver_or_grey": 8,
+        "light_or_other": 5
+      }
+    },
+    "seller_trust": {
+      "max": 10,
+      "rules": {
+        "dealer_4_5_plus": 10,
+        "dealer_4_plus": 8,
+        "private": 6,
+        "dealer_3_plus": 5,
+        "dealer_under_3": 3
+      }
+    },
+    "mod_readiness": {
+      "max": 10,
+      "rules": {
+        "steel_dark_under_budget": 10,
+        "steel_under_budget": 7,
+        "air_suspension": -10,
+        "over_7500": -5
+      }
+    }
+  },
+  "hard_disqualifiers": [
+    "Air suspension (Luftfederung/Luftfahrwerk) UNLESS listed_price + 1200 < 7500",
+    "Repaired accident damage (reparierter Unfallschaden)",
+    "Turbo or Turbo S model at this budget",
+    "Export/Bastler with no photos",
+    "Declared defective (Defekt)"
+  ],
+  "red_flags_penalty": {
+    "five_plus_owners": -5,
+    "no_unfallfrei_tag": -7,
+    "transfer_case_issues": -10,
+    "early_2003_model": -3,
+    "expired_tuv": -2
+  },
+  "alert_thresholds": {
+    "gem": { "min_score": 78, "emoji": "🚨", "action": "BUY SIGNAL. Move immediately. <24h shelf life." },
+    "hot": { "min_score": 70, "emoji": "⚡", "action": "Act within hours. ~4 day shelf life." },
+    "watch": { "min_score": 60, "emoji": "⚠️", "action": "Verify condition. ~2 day shelf life." },
+    "low": { "min_score": 0, "emoji": "🐢", "action": "Low priority or skip." }
+  },
+  "market_velocity_benchmarks": {
+    "score_80_plus": { "avg_days_on_market": 1.0, "sample": 1 },
+    "score_70_79": { "avg_days_on_market": 4.0, "sample": 2 },
+    "score_60_69": { "avg_days_on_market": 2.2, "sample": 5 },
+    "score_below_60": { "avg_days_on_market": 1.0, "sample": 1 }
+  },
+  "german_keywords": {
+    "positive": {
+      "Unfallfrei": "accident-free",
+      "Scheckheftgepflegt": "service book maintained",
+      "Scheckheft": "service book",
+      "VB": "negotiable price",
+      "Verhandlungsbasis": "negotiable",
+      "Garagenfahrzeug": "garage-kept",
+      "Nichtraucher": "non-smoker"
+    },
+    "negative_disqualify": {
+      "Luftfederung": "air suspension — AUTO REJECT",
+      "Luftfahrwerk": "air suspension — AUTO REJECT",
+      "LUFT": "air suspension — AUTO REJECT (when in title/features)",
+      "Reparierter Unfallschaden": "repaired accident — REJECT",
+      "Defekt": "defective — REJECT",
+      "Bastler": "project car — REJECT",
+      "Export": "export only — REJECT"
+    },
+    "negative_penalize": {
+      "Verteilergetriebe": "transfer case — investigate",
+      "Ölverlust": "oil leak — -5 points",
+      "Getriebeproblem": "transmission issue — -10 points"
+    }
+  },
+  "search_url": "https://suchen.mobile.de/fahrzeuge/search.html?dam=false&fr=2003%3A2006&ft=PETROL&pw=250%3A&isSearchRequest=true&ms=20100%3B18%3B&p=%3A10000&sb=doc&s=Car&vc=Car",
+  "target_spec": {
+    "model": "Porsche Cayenne S (955)",
+    "engine": "4.5L V8 NA — 250 kW / 340 PS",
+    "years": "2003-2006",
+    "suspension": "STEEL SPRINGS ONLY",
+    "budget_car_eur": "4000-7500",
+    "budget_allin_eur": "10000",
+    "color_preference": ["Black", "Dark Grey", "Dark Blue", "Dark Green", "any"],
+    "mileage_max_km": 200000,
+    "mileage_sweet_km": "120000-170000"
+  }
+}
